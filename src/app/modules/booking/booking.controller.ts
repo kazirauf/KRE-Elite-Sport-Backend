@@ -19,7 +19,8 @@ const createBooking: RequestHandler = async (req, res, next) => {
 const viewAllBookings: RequestHandler = async (req, res, next) => {
   try {
     const result = await BookingServices.viewAllBookings();
-
+    console.log(result);
+    
     return res.status(200).json({
       success: true,
       statusCode: 200,

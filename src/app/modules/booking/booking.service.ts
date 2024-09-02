@@ -72,14 +72,18 @@ const createBooking = async (payload: TBooking, user: JwtPayload) => {
 };
 
 const viewAllBookings = async () => {
-  const result = await BookingModel.find({ isBooked: 'confirmed' })
+  
+  const result = await BookingModel.find({ })
     .populate('user')
     .populate('facility');
+    console.log(result);
+    
   return result;
+
 };
 
 const viewAllBookingsByUser = async (user: JwtPayload) => {
-  const result = await BookingModel.find({ isBooked: 'confirmed' })
+  const result = await BookingModel.find({  })
     .populate({
       path: 'user',
       match: { email: user.email },
@@ -286,13 +290,11 @@ const paymentConfirmation = async (transactionId: string) => {
           margin: 0 auto;
         "
       >
-        <i class="checkmark">✓</i>
+      
       </div>
-      <h1>Payment Successful!</h1>
 
-      <button onclick="window.location.href='https://sport-ease-client.web.app/dashboard';">
-        Go To Your Dashboard
-      </button>
+ <img src="https://static.vecteezy.com/system/resources/previews/004/968/453/non_2x/failed-to-make-payment-by-credit-card-concept-illustration-flat-design-eps10-modern-graphic-element-for-landing-page-empty-state-ui-infographic-vector.jpg" alt="payment "/>
+      
     </div>
   </body>
 </html>
@@ -389,13 +391,12 @@ const paymentConfirmation = async (transactionId: string) => {
           margin: 0 auto;
         "
       >
-        <i class="checkmark">❌</i>
+       
       </div>
-      <h1>Payment Failed!</h1>
+     <img src="https://cashfreelogo.cashfree.com/website/landings/instant-settlements/payment-done.png" alt="payment "/>
+    
 
-      <button onclick="window.location.href='https://sport-ease-client.web.app/';">
-        Go To Homepage
-      </button>
+    
     </div>
   </body>
 </html>

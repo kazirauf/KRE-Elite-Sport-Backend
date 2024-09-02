@@ -1,8 +1,8 @@
-# Sports Facility Booking Platform
+# KRE Elite Sport Backend
 
 ## Project Overview
 
-The Sports Facility Booking Platform is designed to simplify the process of booking sports facilities. This backend application, built using TypeScript, Express.js, and Mongoose, supports essential functionalities like CRUD operations, authentication & authorization, and transaction management.
+The KRE Elite Sport Backend is designed to simplify the process of booking sports facilities. This backend application, built using TypeScript, Express.js, and Mongoose, supports essential functionalities like CRUD operations, authentication & authorization, and transaction management. It serves as the backbone for managing facilities, bookings, and user data, ensuring a secure and efficient user experience.
 
 ## Features
 
@@ -38,7 +38,7 @@ The Sports Facility Booking Platform is designed to simplify the process of book
 
 ## Live Server
 
-The application is deployed and can be accessed at: [Live Server URL](https://sport-ease-backend.vercel.app/api/facility)
+The application is deployed and can be accessed at: [Live Server URL](https://kre-elite-sport-bakend.vercel.app)
 
 ## Setting Up and Using the Application
 
@@ -53,78 +53,4 @@ The application is deployed and can be accessed at: [Live Server URL](https://sp
 1. **Clone the repository**:
 
    ```sh
-   git clone https://github.com/yasin-arafat-389/SportEase-Backend
-   ```
-
-2. **Install dependencies**:
-
-   ```sh
-   npm install
-   ```
-
-3. **Set up environment variables**:
-   Create a `.env` file in the root directory and add the following variables:
-
-   ```
-   NODE_ENV=development
-   PORT=5000
-   DATABASE_URL=your mongodb URI
-   SALT_ROUND=JWT salt round
-   JWT_ACESS_TOKEN_SECRET=your JWT access token secret
-   ACCESS_TOKEN_EXPIRES_IN=1d
-   ```
-
-4. **Run the application**:
-   ```sh
-   npm run start:dev
-   ```
-
-### Usage
-
-Once the server is running, you can use the following endpoints:
-
-### API Endpoints
-
-1. **User Sign Up**
-
-- **Route**: `POST /api/auth/signup`
-
-2. **User Login**
-
-- **Route**: `POST /api/auth/login`
-
-3. **Create a Facility (Admin Only)**
-
-- **Route**: `POST /api/facility`
-
-4. **Update a Facility (Admin Only)**
-
-- **Route**: `PUT /api/facility/:id`
-
-5. **Delete a Facility - Soft Delete (Admin Only)**
-
-- **Route**: `DELETE /api/facility/:id`
-
-6. **Get All Facilities**
-
-- **Route**: `GET /api/facility`
-
-7. **Check Availability**
-
-- **Route**: `GET /api/check-availability?date=15-06-2024`
-
-8. **Create a Booking (User Only)**
-
-- **Route**: `POST /api/bookings`
-
-9. **View All Bookings (Admin Only)**
-
-- **Route**: `GET /api/bookings`
-
-10. **View All Bookings (Admin Only)**
-
-- **Route**: `GET /api/bookings/user`
-
-11. **Cancel a Booking (User Only)**
-
-- **Route**: `DELETE /api/bookings/:id`
+   git clone https://github.com/kazirauf/KRE-Elite-Sport-Backend
